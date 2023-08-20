@@ -2,7 +2,7 @@
 
 - This convert chess FEN array to PGN.
 - License is [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png) ](https://creativecommons.org/publicdomain/zero/1.0/deed.ja).
-- This do not do validation.
+- This do not do validation. The user must set correct FEN array.
 - This do not write check(mate) and stalemate.
 - [FEN to PGN Online Converter](https://iwamizawa-software.github.io/fen-to-pgn/)
 
