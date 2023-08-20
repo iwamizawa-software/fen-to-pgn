@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<title>FEN to PGN Online Converter</title>
+<style>textarea{width:100em;max-width:100%;height:10em}</style>
+<body>
+<h1>FEN to PGN Online Converter</h1>
+<p><a href="https://github.com/iwamizawa-software/fen-to-pgn">ReadMe</a>
+<h2>FEN</h2>
+<textarea id="fen"></textarea>
+<div><input type="button" value="convert"></div>
+<h2>PGN</h2>
+<textarea id="pgn"></textarea>
+<script src="fen-to-pgn.js"></script>
+<script>
+document.querySelector('input').onclick = function () {
+  try {
+    document.getElementById('pgn').value = fenToPgn(document.getElementById('fen').value.replace(/^[\r\n]+|[\r\n]+$/g, '').split(/[\r\n]+/));
+  } catch (err) {
+    alert(err);
+  }
+};
+document.getElementById('fen').placeholder = `Example:
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1
+rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2
+rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2
+r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3
+r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3
+`;
+</script>
+</body>
+</html>
