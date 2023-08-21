@@ -34,7 +34,7 @@ var fenToPgn = function (fens) {
     }
     var pieces = Object.keys(adds), pieceName = pieces[0].toUpperCase(), capture = Object.keys(removes).length === 2;
     if (pieces.length === 2) {
-      pgn += 'O-O' + ((adds['k'] || adds['K']).f === 1 ? '-O' : '');
+      pgn += 'O-O' + ((adds['k'] || adds['K']).f === 2 ? '-O' : '');
     } else {
       var to;
       if (pieceName === 'P' || !removes[pieces[0]]) {
