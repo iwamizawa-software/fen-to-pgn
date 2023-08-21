@@ -10,4 +10,5 @@
 
 - [Chess Analysis Board and PGN Editor - Chess.com](https://www.chess.com/analysis)
 - [Import game - lichess.org](https://lichess.org/paste)
+- [Chess Analysis Board Online Free - chesscompass.com](https://www.chesscompass.com/analyze)
 - [PGN Viewer](https://chesstempo.com/pgn-viewer/)
